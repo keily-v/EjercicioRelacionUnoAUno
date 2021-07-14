@@ -38,9 +38,7 @@ public class TestEmpleadoFecha {
         
         //objeto de tipo empleado 
         empleado1 = new Empleado(nombre,fNacimiento,fIngreso); 
-        empleado1.calculoEdad(fNacimiento);
-        empleado1.calculoTiempo(fIngreso);
-      
+        
         empleado1.verDatos();
 //        System.out.println(empleado1); 
 

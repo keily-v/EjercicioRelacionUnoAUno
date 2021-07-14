@@ -35,14 +35,19 @@ public class Empleado {
         int mesactual = fecha.get(Calendar.MONTH);
         int diaactual = fecha.get(Calendar.DAY_OF_MONTH);
         
+        if(diaactual<nFecha.getDia()){
+            diaactual = diaactual +30;
+        }
+        
+        if(mesactual<nFecha.getMes()){
+            mesactual = mesactual +12;
+        }
+        
         int aniocalculado = anioactual - nFecha.getAnio();
         int mescalculado = mesactual - nFecha.getMes();
         int diacalculado = diaactual - nFecha.getDia();
         
         System.out.println("Su edad es: "+aniocalculado+" años "+mescalculado+" meses "+diacalculado+" días");
-//        fechaN.setAnio(aniocalculado);
-//        fechaN.setMes(mescalculado);
-//        fechaN.setDia(diacalculado);
        
     } 
     public void calculoTiempo (Fecha iFecha){
@@ -51,11 +56,19 @@ public class Empleado {
         int anioactual = fecha.get(Calendar.YEAR);
         int mesactual = fecha.get(Calendar.MONTH);
         int diaactual = fecha.get(Calendar.DAY_OF_MONTH);
+        
+        if(diaactual<iFecha.getDia()){
+            diaactual = diaactual +30;
+        }
+        
+        if(mesactual<iFecha.getMes()){
+            mesactual = mesactual +12;
+        }
     
         int aniocalculado = anioactual - iFecha.getAnio();
         int mescalculado = mesactual - iFecha.getMes();
         int diacalculado = diaactual - iFecha.getDia();
-        System.out.println("Su tiempo es: "+aniocalculado+" años "+mescalculado+" meses "+diacalculado+" días");
+        System.out.println("Su tiempo en la empresa es: "+aniocalculado+" años "+mescalculado+" meses "+diacalculado+" días");
     }
     
     
